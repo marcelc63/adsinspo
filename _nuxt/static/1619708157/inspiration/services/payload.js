@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/inspiration/services", {data:[{}],fetch:{},mutations:void 0});
