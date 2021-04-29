@@ -6,14 +6,16 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
     "cloudinary-core": "^2.11.4",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
-    "nuxt-lazy-load": "^1.2.6"
+    "nuxt-lazy-load": "^1.2.6",
+    "push-dir": "^0.4.1"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.3",
