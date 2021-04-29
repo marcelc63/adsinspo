@@ -1,27 +1,66 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        adsinspo
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
+  <div class="flex flex-row">
+    <div class="w-full py-4 lg:py-8 px-4 lg:px-10 flex flex-col">
+      <div class="flex flex-col mb-4">
+        <p class="text-purple-400 font-bold mb-2">Apps Inspiration</p>
+        <p class="text-5xl font-extrabold mb-2">
+          456+ Tech Apps Ads Inspiration
+        </p>
+        <p class="text-sm mb-1 text-purple-400">Filter Category</p>
+
+        <div class="flex flex-row">
+          <router-link to="/">
+            <p
+              class="mr-1 px-2 rounded border-2 border-purple-300 text-purple-400 text-sm hover:bg-purple-200 hover:text-purple-800 cursor-pointer"
+            >
+              All
+            </p>
+          </router-link>
+          <router-link to="/inspiration/apps">
+            <p
+              class="mr-1 px-2 rounded border-2 border-purple-300 text-sm bg-purple-200 text-purple-800 cursor-pointer"
+            >
+              Apps
+            </p>
+          </router-link>
+          <router-link to="/inspiration/fnb">
+            <p
+              class="mr-1 px-2 rounded border-2 border-purple-300 text-purple-400 text-sm hover:bg-purple-200 hover:text-purple-800 cursor-pointer"
+            >
+              FnB
+            </p>
+          </router-link>
+          <router-link to="/inspiration/services">
+            <p
+              class="mr-1 px-2 rounded border-2 border-purple-300 text-purple-400 text-sm hover:bg-purple-200 hover:text-purple-800 cursor-pointer"
+            >
+              Services
+            </p>
+          </router-link>
+          <router-link to="/inspiration/goods">
+            <p
+              class="mr-1 px-2 rounded border-2 border-purple-300 text-purple-400 text-sm hover:bg-purple-200 hover:text-purple-800 cursor-pointer"
+            >
+              Goods
+            </p>
+          </router-link>
+        </div>
+      </div>
+      <div class="flex flex-row flex-wrap mb-4">
+        <div class="w-12/12 md:w-3/12 p-2" v-for="index in 8" :key="index">
+          <img
+            src="/ads/ad2.jpg"
+            class="radius-2 shadow-md"
+            crossorigin="use-credentials"
+          />
+        </div>
+      </div>
+      <div class="flex flex-row justify-center">
+        <div
+          class="rounded bg-purple-600 text-white px-2 py-1 font-bold text-2xl"
         >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+          Load More
+        </div>
       </div>
     </div>
   </div>
@@ -30,7 +69,11 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  created: function () {
+    console.log('hey!')
+  },
+})
 </script>
 
 <style>
@@ -39,42 +82,4 @@ export default Vue.extend({})
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
